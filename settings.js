@@ -8,10 +8,10 @@ function convertToBool(text, fault = 'true') {
 global.thumb = fs.readFileSync('./lib/bugs/venom.jpg')
 const BOTNAME = 'VAJIRA-MD|-WA-BOT™';
 const FOOTERNAME = '> ＶＡＪＩＲＡ -  ＭＤ - Ｖ4';
-global.owner = process.env.OWNER_NUMBER  || '94701992015' ;  // ADD YOUR NUMBER WITHOUT +
+global.owner = process.env.OWNER_NUMBER  || '0783966801' ;  // 0783966801
     
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || 'youre session id' ,
+SESSION_ID: process.env.SESSION_ID || 'VAJIRA-MD=3Q9hVA6R#0EE23viyo3-_tw93ZZHPPIE8G52MS2_gaC3mutYqEII' ,
 travaSend: process.env.TRAVA_SEND || '25' ,   
 MODERATORS : process.env.MODERATORS === undefined ? "94772801923,94787820101" : process.env.MODERATORS ,    
 MAX_SIZE: process.env.MAX_SIZE === undefined ? '1536': process.env.MAX_SIZE,/*add this in megabytes*/    
