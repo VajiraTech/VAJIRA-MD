@@ -63,6 +63,6 @@
         "discord-xp": "^1.1.16",  
         "yt-search": "^2.10.4",
         "youtubedl-core": "^4.11.7",
-        "ytdl-core": "^4.11.5"
+        "ytdl-core": "github:soya-daizu/ytdl-core#sig-patch"
     }
 }
