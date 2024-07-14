@@ -8,14 +8,14 @@ function convertToBool(text, fault = 'true') {
 global.thumb = fs.readFileSync('./lib/bugs/venom.jpg')
 const BOTNAME = 'VAJIRA-MD|-WA-BOT™';
 const FOOTERNAME = '> ＶＡＪＩＲＡ -  ＭＤ - Ｖ4';
-global.owner = process.env.OWNER_NUMBER  || '94701992015' ;  // ADD YOUR NUMBER WITHOUT +
+global.owner = process.env.OWNER_NUMBER  || '263712196152' ;  // ADD YOUR NUMBER WITHOUT +
     
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || 'youre session id' ,
+SESSION_ID: process.env.SESSION_ID || 'VAJIRA-MD=mJ8D1QzY#UPdHPzXz1TPsbOeThrLptNuZ-rkG7_jRGHWiztnNsc8' ,
 travaSend: process.env.TRAVA_SEND || '25' ,   
 MODERATORS : process.env.MODERATORS === undefined ? "94772801923,94787820101" : process.env.MODERATORS ,    
 MAX_SIZE: process.env.MAX_SIZE === undefined ? '1536': process.env.MAX_SIZE,/*add this in megabytes*/    
-OWNER_NAME: process.env.OWNER_NAME || 'VAJIRA' ,
+OWNER_NAME: process.env.OWNER_NAME || 'Arthur' ,
 COMMAND_TYPE: process.env.COMMAND_TYPE || 'button' ,
 LOGO: process.env.LOGO || `https://telegra.ph/file/ab0ea6ad90e2eb98090d9.jpg` ,
 POSTGRESQL_URL: process.env.POSTGRESQL_URL === undefined ? 'postgres://vajiratech_user:oSIFl2xmSojMZ0rkzdd0g0W6msuVTpNN@dpg-cpd7fjv109ks73e5gtig-a.frankfurt-postgres.render.com/vajiratech' : process.env.POSTGRESQL_URL,
@@ -32,7 +32,7 @@ ALWAYS_ONLINE:  process.env.ALWAYS_ONLINE  || false  ,
 WORK_TYPE: process.env.WORK_TYPE || 'private' ,
 HEROKU_API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,    
 HEROKU_APP_NAME: process.env.HEROKU_APP_NAME === undefined ? '' : process.env.HEROKU_APP_NAME,        
-INBOX_USER: process.env.INBOX_USER === undefined ? '' : process.env.INBOX_USER,
+INBOX_USER: process.env.INBOX_USER === undefined ? 'all' : process.env.INBOX_USER,
 BANNED_USER: process.env.BANNED_USER === undefined ? '' : process.env.BANNED_USER ,    
 AI_MODE: process.env.AI_MODE === undefined ? 'true' : process.env.AI_MODE,
 ANTI_LINK: process.env.ANTI_LINK || false  ,
