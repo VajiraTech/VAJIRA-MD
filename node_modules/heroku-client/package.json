@@ -1,0 +1,46 @@
+{
+  "name": "heroku-client",
+  "description": "A wrapper for the Heroku v3 API",
+  "version": "3.1.0",
+  "author": "Jeff Dickey",
+  "bugs": {
+    "url": "https://github.com/heroku/node-heroku-client/issues"
+  },
+  "contributors": [
+    "Jonathan Clem",
+    "Jeff Dickey",
+    "Ray McDermott",
+    "Bob Zoller",
+    "Sehrope Sarkuni"
+  ],
+  "dependencies": {
+    "is-retry-allowed": "^1.0.0",
+    "tunnel-agent": "^0.6.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.0",
+    "debug": "^3.1.0",
+    "nock": "^11.7.0",
+    "nyc": "^11.3.0",
+    "standard": "^10.0.3",
+    "stdout-stderr": "^0.1.9"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "heroku"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-heroku-client"
+  },
+  "scripts": {
+    "test": "nyc ava && standard"
+  }
+}

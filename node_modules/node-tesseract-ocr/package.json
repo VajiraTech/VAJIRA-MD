@@ -1,0 +1,37 @@
+{
+  "name": "node-tesseract-ocr",
+  "version": "2.2.1",
+  "description": "A Node.js wrapper for the Tesseract OCR API",
+  "keywords": [
+    "ocr",
+    "tesseract",
+    "text recognition",
+    "optical character recognition",
+    "image to text"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/zapolnoch/node-tesseract-ocr.git"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "npm-run-all test:*",
+    "test:lint": "eslint .",
+    "test:tape": "tape test/**/*.js",
+    "test:audit": "npm audit --audit-level=high"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-silence": "^0.7.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "rewire": "^5.0.0",
+    "tape": "^5.2.2"
+  }
+}

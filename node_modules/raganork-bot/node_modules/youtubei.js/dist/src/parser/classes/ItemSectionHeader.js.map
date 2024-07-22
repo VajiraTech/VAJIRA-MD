@@ -1,0 +1,1 @@
+{"version":3,"file":"ItemSectionHeader.js","sourceRoot":"","sources":["../../../../src/parser/classes/ItemSectionHeader.ts"],"names":[],"mappings":";;;;;AAAA,uDAA+B;AAC/B,wCAAoC;AAEpC,MAAM,iBAAkB,SAAQ,gBAAM;IAKpC,YAAY,IAAS;QACnB,KAAK,EAAE,CAAC;QACR,IAAI,CAAC,KAAK,GAAG,IAAI,cAAI,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC;IACpC,CAAC;;AAPM,sBAAI,GAAG,mBAAmB,CAAC;AAUpC,kBAAe,iBAAiB,CAAC"}

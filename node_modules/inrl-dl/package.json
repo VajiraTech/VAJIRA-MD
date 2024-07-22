@@ -1,0 +1,25 @@
+{
+  "name": "inrl-dl",
+  "version": "1.0.0",
+  "description": "NPM Package for whatsapp-bot dl functions",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inrl-md/inrl-dl/.git"
+  },
+  "author": "inrl",
+  "license": "GNU",
+  "dependencies": {
+    "youtubei.js": "^4.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/inrl-md/inrl-dl/issues"
+  },
+  "homepage": "https://github.com/inrl-official/inrl-bot-md#readme"
+}

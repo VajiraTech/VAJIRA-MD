@@ -1,0 +1,23 @@
+import { GitConstructError } from './errors/git-construct-error';
+import { GitError } from './errors/git-error';
+import { GitPluginError } from './errors/git-plugin-error';
+import { GitResponseError } from './errors/git-response-error';
+import { TaskConfigurationError } from './errors/task-configuration-error';
+import { CheckRepoActions } from './tasks/check-is-repo';
+import { CleanOptions } from './tasks/clean';
+import { GitConfigScope } from './tasks/config';
+import { grepQueryBuilder } from './tasks/grep';
+import { ResetMode } from './tasks/reset';
+declare const api: {
+    CheckRepoActions: typeof CheckRepoActions;
+    CleanOptions: typeof CleanOptions;
+    GitConfigScope: typeof GitConfigScope;
+    GitConstructError: typeof GitConstructError;
+    GitError: typeof GitError;
+    GitPluginError: typeof GitPluginError;
+    GitResponseError: typeof GitResponseError;
+    ResetMode: typeof ResetMode;
+    TaskConfigurationError: typeof TaskConfigurationError;
+    grepQueryBuilder: typeof grepQueryBuilder;
+};
+export default api;

@@ -1,0 +1,24 @@
+{
+  "name": "mumaker",
+  "version": "2.0.0",
+  "description": "Maker and Downloader",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "ephoto",
+    "textpro",
+    "photooxy",
+    "maker",
+    "mumaker"
+  ],
+  "author": "Dika Ardnt.",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "form-data": "^4.0.0"
+  }
+}

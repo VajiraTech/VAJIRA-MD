@@ -1,0 +1,1 @@
+{"version":3,"file":"spawn-options-plugin.js","sourceRoot":"","sources":["spawn-options-plugin.ts"],"names":[],"mappings":";;;AACA,oCAAgC;AAGhC,SAAgB,kBAAkB,CAAC,YAAmC;IACnE,MAAM,OAAO,GAAG,YAAI,CAAC,YAAY,EAAE,CAAC,KAAK,EAAE,KAAK,CAAC,CAAC,CAAC;IAEnD,OAAO;QACJ,IAAI,EAAE,eAAe;QACrB,MAAM,CAAC,IAAI;YACR,uCAAW,OAAO,GAAK,IAAI,EAAE;QAChC,CAAC;KACH,CAAC;AACL,CAAC;AATD,gDASC"}

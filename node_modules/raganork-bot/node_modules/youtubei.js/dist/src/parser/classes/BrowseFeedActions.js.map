@@ -1,0 +1,1 @@
+{"version":3,"file":"BrowseFeedActions.js","sourceRoot":"","sources":["../../../../src/parser/classes/BrowseFeedActions.ts"],"names":[],"mappings":";;;;;AAAA,qDAA8B;AAC9B,wCAAoC;AAEpC,MAAM,iBAAkB,SAAQ,gBAAM;IAKpC,YAAY,IAAS;QACnB,KAAK,EAAE,CAAC;QACR,IAAI,CAAC,QAAQ,GAAG,eAAM,CAAC,UAAU,CAAC,IAAI,CAAC,QAAQ,CAAC,CAAC;IACnD,CAAC;;AAPM,sBAAI,GAAG,mBAAmB,CAAC;AAUpC,kBAAe,iBAAiB,CAAC"}

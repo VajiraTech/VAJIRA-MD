@@ -1,0 +1,14 @@
+import NavigationEndpoint from './NavigationEndpoint';
+import Text from './misc/Text';
+import Thumbnail from './misc/Thumbnail';
+import { YTNode } from '../helpers';
+declare class ReelItem extends YTNode {
+    static type: string;
+    id: string;
+    title: Text;
+    thumbnails: Thumbnail[];
+    views: Text;
+    endpoint: NavigationEndpoint;
+    constructor(data: any);
+}
+export default ReelItem;

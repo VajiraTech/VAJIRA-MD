@@ -1,0 +1,32 @@
+{
+  "name": "fb-downloader-scrapper",
+  "version": "2.0.0",
+  "description": "Scrap easily video info and direct url data from Facebook",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorsouzaleal/fb-downloader-scrapper.git"
+  },
+  "keywords": [
+    "fb",
+    "downloader",
+    "scrapper",
+    "url",
+    "download",
+    "facebook"
+  ],
+  "author": "Victorsouzaleal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/victorsouzaleal/fb-downloader-scrapper/issues"
+  },
+  "homepage": "https://github.com/victorsouzaleal/fb-downloader-scrapper#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}

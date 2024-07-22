@@ -1,0 +1,40 @@
+{
+  "name": "@sl-code-lords/text-pro-me",
+  "version": "1.0.0",
+  "description": "full scrap of textpro.me",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SL-CODE-LORDS/Text-Pro-Me.git"
+  },
+  "keywords": [
+    "text",
+    "to",
+    "image",
+    "editor",
+    "maker",
+    "text-maker",
+    "text-pro",
+    "textpro.me"
+  ],
+  "author": "Ravindu Manoj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SL-CODE-LORDS/Text-Pro-Me/issues"
+  },
+  "homepage": "https://github.com/SL-CODE-LORDS/Text-Pro-Me#readme",
+  "dependencies": {
+    "@sl-code-lords/js-extra-types": "^0.0.2-dev",
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cookie": "^0.5.0",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security"
+  }
+}

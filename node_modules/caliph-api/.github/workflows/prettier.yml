@@ -1,0 +1,21 @@
+name: Beutifier Codes
+
+on: workflow_dispatch
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+      - run: npm i -g prettier
+      - run: prettier --write '**/*.{js,json}'
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: automatic tidy up code
+          branch: ${{ github.head_ref }}

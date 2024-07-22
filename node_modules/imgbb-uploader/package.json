@@ -1,0 +1,79 @@
+{
+  "name": "imgbb-uploader",
+  "version": "1.3.5",
+  "description": "Lightweight module to upload images through Imgbb API.",
+  "main": "lib/cjs/index.js",
+  "browser": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/index.d.ts",
+  "dependencies": {},
+  "scripts": {
+    "dev": "npm run build && npm run format && npm run lint && npm run test && npm run remap",
+    "test": "jest --config jestconfig.json",
+    "build": "node clean.js && tsc -p tsconfig-cjs.json",
+    "build:cjs": "node clean.js && tsc -p tsconfig-cjs.json",
+    "build:esm": "node clean.js && tsc -p tsconfig.json",
+    "remap": "node --no-warnings ./node_modules/.bin/remap-istanbul -i coverage/coverage-final.json -o coverage/ts-report -t html -e src/__tests__/images/image,src/__tests__/utils.js",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "clean": "node clean.js",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "pretty-quick": "pretty-quick"
+  },
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.ts"
+  ],
+  "devDependencies": {
+    "@babel/types": "^7.11.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/jest": "^26.0.9",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "axios": "^0.21.4",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "husky": "^4.2.5",
+    "jest": "^26.4.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "remap-istanbul": "git:github.com/TheRealBarenziah/remap-istanbul",
+    "rimraf": "^3.0.2",
+    "sharp": "^0.26.3",
+    "tfaker": "^0.1.0",
+    "ts-jest": "^26.2.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.9",
+    "waifu-generator": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRealBarenziah/imgbb-uploader.git"
+  },
+  "keywords": [
+    "imgbb",
+    "imgbb-uploader",
+    "image upload",
+    "picture upload"
+  ],
+  "author": "TheRealBarenziah",
+  "license": "SEE LICENSE IN TARGARYEN_UNLICENSE",
+  "bugs": {
+    "url": "https://github.com/TheRealBarenziah/imgbb-uploader/issues"
+  },
+  "homepage": "https://github.com/TheRealBarenziah/imgbb-uploader#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

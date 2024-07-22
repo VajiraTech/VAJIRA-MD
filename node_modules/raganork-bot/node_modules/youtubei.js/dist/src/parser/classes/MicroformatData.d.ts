@@ -1,0 +1,30 @@
+import Thumbnail from './misc/Thumbnail';
+import { YTNode } from '../helpers';
+declare class MicroformatData extends YTNode {
+    static type: string;
+    url_canonical: string;
+    title: string;
+    description: string;
+    thumbnail: Thumbnail[] | null;
+    site_name: string;
+    app_name: string;
+    android_package: string;
+    ios_app_store_id: string;
+    ios_app_arguments: string;
+    og_type: string;
+    url_applinks_web: string;
+    url_applinks_ios: string;
+    url_applinks_android: string;
+    url_twitter_ios: string;
+    url_twitter_android: string;
+    twitter_card_type: string;
+    twitter_site_handle: string;
+    schema_dot_org_type: string;
+    noindex: string;
+    is_unlisted: boolean;
+    is_family_safe: boolean;
+    tags: any;
+    available_countries: string[];
+    constructor(data: any);
+}
+export default MicroformatData;

@@ -1,0 +1,65 @@
+{
+  "name": "json2csv",
+  "version": "4.5.1",
+  "description": "Convert JSON to CSV",
+  "keywords": [
+    "json",
+    "to",
+    "csv",
+    "export",
+    "convert",
+    "parse"
+  ],
+  "author": {
+    "name": "Mirco Zeiss",
+    "email": "mirco.zeiss@gmail.com",
+    "twitter": "zeMirco"
+  },
+  "license": "MIT",
+  "bin": {
+    "json2csv": "./bin/json2csv.js"
+  },
+  "main": "dist/json2csv.cjs.js",
+  "module": "dist/json2csv.esm.js",
+  "browser": "dist/json2csv.umd.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zemirco/json2csv"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test | tap-spec",
+    "lint": "eslint bin lib test",
+    "test-with-coverage": "nyc --reporter=text node test | tap-spec",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "deploy:docs": "docpress b && gh-pages -d _docpress",
+    "prepublish": "in-publish && npm run before:publish || not-in-publish",
+    "before:publish": "npm test && npm run build && npm run deploy:docs",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "commander": "^2.15.1",
+    "jsonparse": "^1.3.1",
+    "lodash.get": "^4.4.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "coveralls": "^3.0.3",
+    "docpress": "^0.7.6",
+    "eslint": "^5.14.1",
+    "gh-pages": "^2.0.1",
+    "in-publish": "^2.0.0",
+    "nyc": "^13.3.0",
+    "rollup": "^1.2.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.2.1",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "standard-version": "^5.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.10.1"
+  }
+}
