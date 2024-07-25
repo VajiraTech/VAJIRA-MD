@@ -1,0 +1,53 @@
+{
+  "name": "browser-id3-writer",
+  "version": "4.4.0",
+  "description": "Pure JS library for writing ID3 tag to MP3 files in browsers and Node.js",
+  "main": "dist/browser-id3-writer.js",
+  "scripts": {
+    "lint": "eslint src tools test",
+    "build": "npm run build:concat && npm run build:transpile && npm run build:wrap && npm run build:compress && node tools/distSize",
+    "build:concat": "rollup -f es -i src/ID3Writer.js -o dist/browser-id3-writer.js",
+    "build:transpile": "babel dist/browser-id3-writer.js -o dist/browser-id3-writer.js",
+    "build:wrap": "rollup -f umd -n ID3Writer -i dist/browser-id3-writer.js -o dist/browser-id3-writer.js",
+    "build:compress": "uglifyjs dist/browser-id3-writer.js -o dist/browser-id3-writer.js -m -c",
+    "test": "npm run lint && npm run build && npm run mocha",
+    "mocha": "mocha --recursive",
+    "preversion": "npm test",
+    "version": "git add package.json package-lock.json",
+    "postversion": "git push && git push --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egoroof/browser-id3-writer.git"
+  },
+  "keywords": [
+    "browser",
+    "nodejs",
+    "writer",
+    "id3",
+    "mp3",
+    "audio",
+    "tag",
+    "library"
+  ],
+  "author": "egoroof",
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist/browser-id3-writer.js"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egoroof/browser-id3-writer/issues"
+  },
+  "homepage": "https://github.com/egoroof/browser-id3-writer#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "eslint": "^6.8.0",
+    "mocha": "^7.0.1",
+    "rollup": "^1.31.1",
+    "uglify-js": "^3.8.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ip-range-check",
+  "version": "0.2.0",
+  "description": "Check whether an IP(v4 or v6) is in an CIDR range",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielcompton/ip-range-check.git"
+  },
+  "keywords": [
+    "ip",
+    "ipv6",
+    "IP",
+    "Address",
+    "CIDR",
+    "range"
+  ],
+  "author": "Daniel Compton (http://danielcompton.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielcompton/ip-range-check/issues"
+  },
+  "homepage": "https://github.com/danielcompton/ip-range-check#readme",
+  "dependencies": {
+    "ipaddr.js": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}

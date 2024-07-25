@@ -1,0 +1,1 @@
+{"version":3,"file":"RemoveChatItemByAuthorAction.js","sourceRoot":"","sources":["../../../../../src/parser/classes/livechat/RemoveChatItemByAuthorAction.ts"],"names":[],"mappings":";;AAAA,2CAAuC;AAEvC,MAAM,4BAA6B,SAAQ,gBAAM;IAK/C,YAAY,IAAS;QACnB,KAAK,EAAE,CAAC;QACR,IAAI,CAAC,mBAAmB,GAAG,IAAI,CAAC,iBAAiB,CAAC;IACpD,CAAC;;AAPM,iCAAI,GAAG,8BAA8B,CAAC;AAU/C,kBAAe,4BAA4B,CAAC"}

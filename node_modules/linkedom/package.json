@@ -1,0 +1,83 @@
+{
+  "name": "linkedom",
+  "version": "0.14.26",
+  "description": "A triple-linked lists based DOM implementation",
+  "main": "./cjs/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "benchmark": "node test/benchmark/linkedom.js",
+    "benchmark:w3c": "node test/benchmark/linkedom.js --w3c; node test/benchmark/linkedom-cached.js --w3c; node test/benchmark/jsdom.js --w3c; node test/benchmark/basichtml.js --w3c",
+    "benchmark:w3c:ce": "node test/benchmark/linkedom.js --w3c --custom-elements; node test/benchmark/linkedom-cached.js --w3c --custom-elements; node test/benchmark/jsdom.js --w3c --custom-elements; node test/benchmark/basichtml.js --w3c --custom-elements",
+    "benchmark:dom": "node test/benchmark/linkedom.js --dom; node test/benchmark/linkedom-cached.js --dom; node test/benchmark/jsdom.js --dom; node test/benchmark/basichtml.js --dom",
+    "benchmark:dom:ce": "node test/benchmark/linkedom.js --dom --custom-elements; node test/benchmark/linkedom-cached.js --dom --custom-elements; node test/benchmark/jsdom.js --dom --custom-elements; node test/benchmark/basichtml.js --dom --custom-elements",
+    "benchmark:html": "node test/benchmark/jsdon.js --html; node test/benchmark/linkedom.js --html; node test/benchmark/linkedom-cached.js --html; #node test/benchmark/jsdom.js --html",
+    "benchmark:html:ce": "node test/benchmark/linkedom.js --html --custom-elements; node test/benchmark/linkedom-cached.js --html --custom-elements; #node test/benchmark/jsdom.js --html --custom-elements",
+    "benchmark:html:mo": "node test/benchmark/linkedom.js --html --mutation-observer --custom-elements; node test/benchmark/linkedom-cached.js --html --mutation-observer --custom-elements",
+    "benchmark:html:nc": "node test/benchmark/linkedom.js --html --no-clone; node test/benchmark/linkedom-cached.js --html --no-clone; #node test/benchmark/jsdom.js --html --no-clone",
+    "build": "npm run tsc && npm run cjs && rollup -c rollup/es.config.js && npm run test",
+    "cjs": "ascjs --no-default esm cjs",
+    "tsc": "tsc -p .",
+    "hello": "if [[ \"$(node --version)\" =~ ^v1[^2] ]]; then node --input-type=module -e \"import {DOMParser} from './esm/index.js';console.log('\\x1b[7m\\x1b[1m',(new DOMParser).parseFromString('<html>LinkeDOM<canvas /></html>','text/html').querySelectorAll('html')[0].firstChild.toString(),'\\x1b[0m')\"; fi",
+    "test": "eslint esm/ && npm run hello && node test/benchmark/linkedom.js --w3c --mutation-observer --custom-elements && c8 node test/index.js && c8 report -r html",
+    "coverage": "mkdir -p ./coverage; c8 report --reporter=text-lcov > ./coverage/lcov.info"
+  },
+  "keywords": [
+    "DOM",
+    "JSDOM",
+    "alternative",
+    "performance",
+    "lightweight"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "ascjs": "^5.0.1",
+    "c8": "^7.13.0",
+    "eslint": "^8.36.0",
+    "rollup": "^3.19.1",
+    "typescript": "4.5"
+  },
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/esm/index.d.ts",
+      "import": "./esm/index.js",
+      "default": "./cjs/index.js"
+    },
+    "./cached": {
+      "import": "./esm/cached.js",
+      "default": "./cjs/cached.js"
+    },
+    "./package.json": "./package.json",
+    "./worker": "./worker.js"
+  },
+  "typesVersions": {
+    "*": {
+      "cached": [
+        "./types/esm/index.d.ts"
+      ],
+      "worker": [
+        "./types/esm/index.d.ts"
+      ]
+    }
+  },
+  "dependencies": {
+    "css-select": "^5.1.0",
+    "cssom": "^0.5.0",
+    "html-escaper": "^3.0.3",
+    "htmlparser2": "^8.0.1",
+    "uhyphen": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/linkedom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/linkedom/issues"
+  },
+  "homepage": "https://github.com/WebReflection/linkedom#readme"
+}

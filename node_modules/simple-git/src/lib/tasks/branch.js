@@ -1,0 +1,76 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteBranchTask = exports.deleteBranchesTask = exports.branchLocalTask = exports.branchTask = exports.containsDeleteBranchCommand = void 0;
+const git_response_error_1 = require("../errors/git-response-error");
+const parse_branch_delete_1 = require("../parsers/parse-branch-delete");
+const parse_branch_1 = require("../parsers/parse-branch");
+const utils_1 = require("../utils");
+function containsDeleteBranchCommand(commands) {
+    const deleteCommands = ['-d', '-D', '--delete'];
+    return commands.some(command => deleteCommands.includes(command));
+}
+exports.containsDeleteBranchCommand = containsDeleteBranchCommand;
+function branchTask(customArgs) {
+    const isDelete = containsDeleteBranchCommand(customArgs);
+    const commands = ['branch', ...customArgs];
+    if (commands.length === 1) {
+        commands.push('-a');
+    }
+    if (!commands.includes('-v')) {
+        commands.splice(1, 0, '-v');
+    }
+    return {
+        format: 'utf-8',
+        commands,
+        parser(stdOut, stdErr) {
+            if (isDelete) {
+                return parse_branch_delete_1.parseBranchDeletions(stdOut, stdErr).all[0];
+            }
+            return parse_branch_1.parseBranchSummary(stdOut);
+        },
+    };
+}
+exports.branchTask = branchTask;
+function branchLocalTask() {
+    const parser = parse_branch_1.parseBranchSummary;
+    return {
+        format: 'utf-8',
+        commands: ['branch', '-v'],
+        parser,
+    };
+}
+exports.branchLocalTask = branchLocalTask;
+function deleteBranchesTask(branches, forceDelete = false) {
+    return {
+        format: 'utf-8',
+        commands: ['branch', '-v', forceDelete ? '-D' : '-d', ...branches],
+        parser(stdOut, stdErr) {
+            return parse_branch_delete_1.parseBranchDeletions(stdOut, stdErr);
+        },
+        onError({ exitCode, stdOut }, error, done, fail) {
+            if (!parse_branch_delete_1.hasBranchDeletionError(String(error), exitCode)) {
+                return fail(error);
+            }
+            done(stdOut);
+        },
+    };
+}
+exports.deleteBranchesTask = deleteBranchesTask;
+function deleteBranchTask(branch, forceDelete = false) {
+    const task = {
+        format: 'utf-8',
+        commands: ['branch', '-v', forceDelete ? '-D' : '-d', branch],
+        parser(stdOut, stdErr) {
+            return parse_branch_delete_1.parseBranchDeletions(stdOut, stdErr).branches[branch];
+        },
+        onError({ exitCode, stdErr, stdOut }, error, _, fail) {
+            if (!parse_branch_delete_1.hasBranchDeletionError(String(error), exitCode)) {
+                return fail(error);
+            }
+            throw new git_response_error_1.GitResponseError(task.parser(utils_1.bufferToString(stdOut), utils_1.bufferToString(stdErr)), String(error));
+        },
+    };
+    return task;
+}
+exports.deleteBranchTask = deleteBranchTask;
+//# sourceMappingURL=branch.js.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"RemoveBannerForLiveChatCommand.js","sourceRoot":"","sources":["../../../../../src/parser/classes/livechat/RemoveBannerForLiveChatCommand.ts"],"names":[],"mappings":";;AAAA,2CAAuC;AAEvC,MAAM,8BAA+B,SAAQ,gBAAM;IAKjD,YAAY,IAAS;QACnB,KAAK,EAAE,CAAC;QACR,IAAI,CAAC,gBAAgB,GAAG,IAAI,CAAC,cAAc,CAAC;IAC9C,CAAC;;AAPM,mCAAI,GAAG,gCAAgC,CAAC;AAUjD,kBAAe,8BAA8B,CAAC"}

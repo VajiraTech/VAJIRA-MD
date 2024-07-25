@@ -1,0 +1,1 @@
+{"version":3,"file":"check-ignore.js","sourceRoot":"","sources":["check-ignore.ts"],"names":[],"mappings":";;;AACA,0DAA4D;AAE5D,SAAgB,eAAe,CAAC,KAAe;IAC5C,OAAO;QACJ,QAAQ,EAAE,CAAC,cAAc,EAAE,GAAG,KAAK,CAAC;QACpC,MAAM,EAAE,OAAO;QACf,MAAM,EAAE,8BAAgB;KAC1B,CAAC;AACL,CAAC;AAND,0CAMC"}

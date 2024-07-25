@@ -1,0 +1,38 @@
+import { encode as base64Encode, decode as base64Decode } from "../base64.js";
+export const tsValueToJsonValueFns = {
+    int32: (tsValue) => tsValue,
+    int64: (tsValue) => tsValue,
+    uint32: (tsValue) => tsValue,
+    uint64: (tsValue) => tsValue,
+    sint32: (tsValue) => tsValue,
+    sint64: (tsValue) => tsValue,
+    bool: (tsValue) => tsValue,
+    double: (tsValue) => tsValue,
+    float: (tsValue) => tsValue,
+    fixed32: (tsValue) => tsValue,
+    fixed64: (tsValue) => tsValue,
+    sfixed32: (tsValue) => tsValue,
+    sfixed64: (tsValue) => tsValue,
+    string: (tsValue) => tsValue,
+    bytes: (tsValue) => base64Encode(tsValue),
+    enum: (tsValue) => tsValue,
+};
+export const jsonValueToTsValueFns = {
+    int32: (tsValue) => tsValue,
+    int64: (tsValue) => tsValue,
+    uint32: (tsValue) => tsValue,
+    uint64: (tsValue) => tsValue,
+    sint32: (tsValue) => tsValue,
+    sint64: (tsValue) => tsValue,
+    bool: (tsValue) => tsValue,
+    double: (tsValue) => tsValue,
+    float: (tsValue) => tsValue,
+    fixed32: (tsValue) => tsValue,
+    fixed64: (tsValue) => tsValue,
+    sfixed32: (tsValue) => tsValue,
+    sfixed64: (tsValue) => tsValue,
+    string: (tsValue) => tsValue,
+    bytes: (tsValue) => base64Decode(tsValue),
+    enum: (tsValue) => tsValue,
+};
+//# sourceMappingURL=scalar.js.map

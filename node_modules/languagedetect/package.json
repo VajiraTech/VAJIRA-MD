@@ -1,0 +1,33 @@
+{
+  "name": "languagedetect",
+  "description": "Nodejs language detection library using n-gram",
+  "types": "index.d.ts",
+  "keywords": [
+    "n-gram",
+    "language",
+    "language detection"
+  ],
+  "version": "2.0.0",
+  "homepage": "http://blog.fgribreau.com/2011/07/week-end-project-nodejs-language.html",
+  "author": "Francois-Guillaume Ribreau <npm@fgribreau.com> (http://fgribreau.com)",
+  "contributors": [
+    "Ruslan Zavackiy <ruslan.zavackiy@gmail.com> (http://zavackiy.com)"
+  ],
+  "main": "index",
+  "repository": "git://github.com/FGRibreau/node-language-detect.git",
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/FGRibreau/node-language-detect/blob/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test": "nodeunit test/*.test.js"
+  },
+  "devDependencies": {
+    "nodeunit": ">= 0.5.1"
+  },
+  "engines": {
+    "node": ">= 0.4.8"
+  }
+}

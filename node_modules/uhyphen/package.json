@@ -1,0 +1,52 @@
+{
+  "name": "uhyphen",
+  "version": "0.2.0",
+  "description": "A micro utility to hyphenize strings",
+  "main": "./cjs/index.js",
+  "scripts": {
+    "build": "npm run cjs && npm run rollup:es && npm run rollup:babel && npm run min && npm run fix:default && npm run test",
+    "cjs": "ascjs --no-default esm cjs",
+    "rollup:es": "rollup --config rollup/es.config.js",
+    "rollup:babel": "rollup --config rollup/babel.config.js",
+    "min": "uglifyjs index.js -c -m -o min.js",
+    "fix:default": "sed -i 's/({})/({}).default/' index.js && sed -i 's/({})/({}).default/' es.js && sed -i 's/({})/({}).default/' min.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc node test/index.js"
+  },
+  "keywords": [
+    "camel",
+    "snake",
+    "hyphen",
+    "cases",
+    "transformer"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "ascjs": "^3.1.2",
+    "coveralls": "^3.0.11",
+    "nyc": "^15.0.0",
+    "rollup": "^2.1.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "uglify-js": "^3.8.0"
+  },
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    "import": "./esm/index.js",
+    "default": "./cjs/index.js"
+  },
+  "unpkg": "min.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/uhyphen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/uhyphen/issues"
+  },
+  "homepage": "https://github.com/WebReflection/uhyphen#readme"
+}
