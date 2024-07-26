@@ -32,5 +32,5 @@
             "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
         }
      ],
-  "stack": "heroku-22"
+  "stack": "heroku-24"
 }
