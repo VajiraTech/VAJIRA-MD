@@ -1,5 +1,5 @@
 {
-"name": "VAJIRA-MD",    
+"name": "RAY-MD",    
 "version": "10.8.2",
 "scripts": {
 "start": "pm2 start index.js --deep-monitoring --attach --name VAJIRA-MD",
