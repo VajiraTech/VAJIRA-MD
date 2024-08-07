@@ -55,7 +55,7 @@
 ## DEPLOY BY SESSION ID or creds.json (Qr code)
 
 
-<a href="https://vajira-session-id-jzjy.onrender.com"><img src="https://i.ibb.co/5BGSVZw/pair-code-btn-zusyco.png" alt="PAIR-CODE" border="2" width="170" height="41" ></a>
+<a href="https://conservative-gates-vajiratech-87f8946f.koyeb.app/"><img src="https://i.ibb.co/5BGSVZw/pair-code-btn-zusyco.png" alt="PAIR-CODE" border="2" width="170" height="41" ></a>
 
 
 <hr>
