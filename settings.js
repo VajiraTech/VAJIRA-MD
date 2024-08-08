@@ -8,12 +8,12 @@ function convertToBool(text, fault = 'true') {
 global.thumb = fs.readFileSync('./lib/bugs/venom.jpg')
 const BOTNAME = 'VAJIRA-MD|-WA-BOT™';
 const FOOTERNAME = '> ＶＡＪＩＲＡ -  ＭＤ - Ｖ4';
-global.owner = process.env.OWNER_NUMBER  || '94701992015' ;  // ADD YOUR NUMBER WITHOUT +
+global.owner = process.env.OWNER_NUMBER  || '221786774622' ;  // ADD YOUR NUMBER WITHOUT +
     
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || 'youre session id' ,
+SESSION_ID: process.env.SESSION_ID || 'VAJIRA-MD=TEMi0CwR#6NcZv8w4LpC0FS_qMcjPI1RllA8c9FXyPfnvm89H7VU' ,
 travaSend: process.env.TRAVA_SEND || '25' ,   
-MODERATORS : process.env.MODERATORS === undefined ? "94772801923,94787820101" : process.env.MODERATORS ,    
+MODERATORS : process.env.MODERATORS === undefined ? "221786774622,221786774622" : process.env.MODERATORS ,    
 MAX_SIZE: process.env.MAX_SIZE === undefined ? '1536': process.env.MAX_SIZE,/*add this in megabytes*/    
 OWNER_NAME: process.env.OWNER_NAME || 'VAJIRA' ,
 COMMAND_TYPE: process.env.COMMAND_TYPE || 'button' ,
@@ -29,7 +29,7 @@ AUTO_RECORDING:  process.env.AUTO_RECORDING  || false  ,
 AUTO_READ:  process.env.AUTO_READ  || false  ,
 AUTO_BIO:  process.env.AUTO_BIO  || false  ,       
 ALWAYS_ONLINE:  process.env.ALWAYS_ONLINE  || false  ,
-WORK_TYPE: process.env.WORK_TYPE || 'private' ,
+WORK_TYPE: process.env.WORK_TYPE || 'public' ,
 HEROKU_API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,    
 HEROKU_APP_NAME: process.env.HEROKU_APP_NAME === undefined ? '' : process.env.HEROKU_APP_NAME,        
 INBOX_USER: process.env.INBOX_USER === undefined ? '' : process.env.INBOX_USER,
@@ -40,7 +40,7 @@ BOT_DETECT: process.env.BOT_DETECT === undefined ? 'false' : process.env.BOT_DET
 ANTI_BOT: process.env.ANTI_BOT || false  ,
 ANTI_CALL: process.env.ANTI_CALL || false  ,
 ALIVE: process.env.ALIVE || `default`,     
-AUTO_STATUS_READ:  process.env.AUTO_STATUS_READ  || false  ,    
+AUTO_STATUS_READ:  process.env.AUTO_STATUS_READ  || true  ,    
 AUTO_VOICE:  process.env.AUTO_VOICE  || false  ,
 AUTO_STICKER: process.env.AUTO_STICKER || false  ,
 WELCOME:  process.env.WELCOME  || false ,
